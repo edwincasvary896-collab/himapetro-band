@@ -427,3 +427,484 @@ footer p:first-child {
     }
 
        }
+/* =========================================
+   ALBUM PAGES
+   ========================================= */
+
+.album-header {
+    min-height: 55vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+
+    background:
+        radial-gradient(
+            circle at 30% 50%,
+            #1b2028 0%,
+            #0d1015 45%,
+            #090b0f 80%
+        );
+
+    border-bottom: 1px solid #1d2229;
+}
+
+
+.album-header-content {
+    max-width: 750px;
+}
+
+
+.album-header h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+
+    font-weight: 300;
+
+    letter-spacing: 5px;
+
+    color: #e5e7eb;
+
+    margin-bottom: 20px;
+}
+
+
+.album-header p:not(.section-label) {
+    color: #7f8791;
+
+    max-width: 600px;
+}
+
+
+
+/* =========================================
+   TRACKLIST
+   ========================================= */
+
+.tracklist {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+.track {
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    padding: 28px 10px;
+
+    border-bottom: 1px solid #20252d;
+
+    transition: 0.3s;
+}
+
+
+.track:hover {
+    padding-left: 20px;
+
+    background: #0f1318;
+}
+
+
+.track-number {
+    width: 70px;
+
+    color: #555d68;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+}
+
+
+.track-title {
+    flex: 1;
+
+    color: #cdd1d6;
+
+    font-size: 1.15rem;
+}
+
+
+.track-arrow {
+    color: #555d68;
+
+    font-size: 1.2rem;
+}
+
+
+.back-section {
+    margin-top: 80px;
+}
+
+
+.back-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #737b86;
+
+    border: 1px solid #303640;
+
+    padding: 12px 22px;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    margin-right: 10px;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+    color: #090b0f;
+
+    background: #d4d7dc;
+
+    border-color: #d4d7dc;
+}
+
+
+
+/* =========================================
+   SONG HEADER
+   ========================================= */
+
+.song-header {
+    min-height: 55vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1a1e26 0%,
+            #0d1015 45%,
+            #090b0f 80%
+        );
+
+    border-bottom: 1px solid #1d2229;
+}
+
+
+.song-header-content {
+    max-width: 850px;
+}
+
+
+.song-header h1 {
+    font-size: clamp(
+        2.5rem,
+        7vw,
+        5rem
+    );
+
+    font-weight: 300;
+
+    letter-spacing: 4px;
+
+    color: #e5e7eb;
+
+    margin-bottom: 20px;
+}
+
+
+.song-subtitle {
+    color: #777f89;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+
+
+/* =========================================
+   SONG VIDEO
+   ========================================= */
+
+.song-video {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+.video-container {
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    height: 0;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border: 1px solid #20252d;
+
+    margin-top: 30px;
+}
+
+
+.video-container iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+
+/* =========================================
+   SONG ABOUT
+   ========================================= */
+
+.song-about,
+.true-story {
+
+    max-width: 750px;
+
+    margin: 130px auto 0;
+
+}
+
+
+.song-about p:not(.section-label),
+.true-story p:not(.section-label) {
+
+    color: #858c96;
+
+    font-size: 1rem;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================
+   TRUE STORY
+   ========================================= */
+
+.true-story {
+
+    padding: 45px;
+
+    border-left: 2px solid #555d68;
+
+    background: #0e1116;
+}
+
+
+.true-story h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+
+.true-story em {
+
+    color: #a0a6ae;
+
+}
+
+
+
+/* =========================================
+   LYRICS
+   ========================================= */
+
+.lyrics {
+
+    max-width: 750px;
+
+    margin: 150px auto 0;
+}
+
+
+.lyrics-content {
+
+    margin-top: 40px;
+
+    padding: 45px;
+
+    background: #0d1015;
+
+    border: 1px solid #1e242c;
+}
+
+
+.lyrics-content h3 {
+
+    color: #cfd3d8;
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    margin-top: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+.lyrics-content h3:first-child {
+
+    margin-top: 0;
+
+}
+
+
+.lyrics-content p {
+
+    color: #858c96;
+
+    font-size: 1rem;
+
+    line-height: 2;
+
+}
+
+
+.lyrics-content em {
+
+    color: #626a75;
+
+}
+
+
+
+/* =========================================
+   SONG NAVIGATION
+   ========================================= */
+
+.song-navigation {
+
+    max-width: 750px;
+
+    margin: 80px auto 0;
+}
+
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .album-header,
+    .song-header {
+
+        min-height: 60vh;
+
+        padding: 50px 25px;
+
+    }
+
+
+    .album-header h1,
+    .song-header h1 {
+
+        font-size: 2.5rem;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .track {
+
+        padding: 22px 5px;
+
+    }
+
+
+    .track-number {
+
+        width: 50px;
+
+    }
+
+
+    .track-title {
+
+        font-size: 1rem;
+
+    }
+
+
+    .song-about,
+    .true-story,
+    .lyrics {
+
+        margin-top: 100px;
+
+    }
+
+
+    .true-story {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .lyrics-content {
+
+        padding: 30px 22px;
+
+    }
+
+
+    .lyrics-content p {
+
+        font-size: 0.95rem;
+
+        line-height: 1.9;
+
+    }
+
+
+    .song-navigation {
+
+        margin-top: 60px;
+
+    }
+
+
+    .back-button {
+
+        margin-bottom: 10px;
+
+    }
+
+}
