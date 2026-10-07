@@ -1,7 +1,12 @@
-/* =========================
+/* =========================================
    HIMAPETRO BAND
-   Sad / Melancholic Theme
-   ========================= */
+   Dark / Sad / Cinematic Theme
+   ========================================= */
+
+
+/* =========================================
+   RESET
+   ========================================= */
 
 * {
     margin: 0;
@@ -9,176 +14,416 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: #0b0d10;
-    color: #d6d9dd;
-    font-family: Arial, Helvetica, sans-serif;
+    background: #090b0f;
+    color: #d4d7dc;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     line-height: 1.7;
 }
 
 
-/* =========================
-   HEADER
-   ========================= */
+/* =========================================
+   HERO
+   ========================================= */
 
-header {
-    min-height: 70vh;
+.hero {
+    min-height: 100vh;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     text-align: center;
 
     padding: 40px 20px;
 
+    position: relative;
+
     background:
-        linear-gradient(
-            rgba(5, 7, 10, 0.75),
-            rgba(5, 7, 10, 0.95)
+        radial-gradient(
+            circle at center,
+            #1b2028 0%,
+            #0d1015 45%,
+            #090b0f 75%
         );
 }
 
-header h1 {
-    font-size: 4rem;
-    letter-spacing: 8px;
-    text-transform: uppercase;
 
-    color: #e5e7eb;
+/* Subtle dark overlay */
 
-    margin-bottom: 10px;
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 60%,
+            #090b0f 100%
+        );
+
+    pointer-events: none;
 }
 
-header p {
-    font-size: 1rem;
-    color: #7f8791;
-    letter-spacing: 3px;
+
+/* Hero content */
+
+.hero-content {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 800px;
 }
 
 
-/* =========================
-   MAIN CONTENT
-   ========================= */
+/* Small title */
 
-main {
-    width: 90%;
-    max-width: 1000px;
+.subtitle {
+    color: #6f7782;
 
-    margin: auto;
-    padding: 80px 0;
-}
+    font-size: 0.75rem;
 
-section {
-    margin-bottom: 90px;
-}
-
-h2 {
-    font-size: 2rem;
-    font-weight: 400;
-
-    color: #e5e7eb;
+    letter-spacing: 6px;
 
     margin-bottom: 25px;
-
-    letter-spacing: 2px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-
-    color: #c4c9cf;
-
-    margin-bottom: 15px;
-}
-
-p {
-    color: #858c95;
 }
 
 
-/* =========================
-   ALBUM
-   ========================= */
+/* Main title */
 
-article {
-    border-left: 1px solid #343941;
+.hero h1 {
+    font-size: clamp(
+        2.8rem,
+        8vw,
+        6rem
+    );
 
-    padding: 30px;
-    margin-bottom: 35px;
+    font-weight: 300;
 
-    background: #101318;
+    letter-spacing: 12px;
+
+    color: #e7e9ec;
+
+    margin-bottom: 25px;
+}
+
+
+/* Description */
+
+.hero-description {
+    max-width: 550px;
+
+    margin: 0 auto 40px;
+
+    color: #858c96;
+
+    font-size: 1rem;
+}
+
+
+/* Explore button */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    border: 1px solid #414751;
+
+    color: #cdd1d6;
+
+    text-decoration: none;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 3px;
 
     transition: 0.3s;
 }
 
-article:hover {
-    border-left: 3px solid #69717c;
-    background: #14181e;
-}
+.hero-button:hover {
+    background: #d4d7dc;
 
-article ul {
-    list-style: none;
-    margin-top: 20px;
-}
+    color: #090b0f;
 
-article li {
-    padding: 8px 0;
-
-    color: #9ca3ad;
-
-    border-bottom: 1px solid #252a31;
+    border-color: #d4d7dc;
 }
 
 
-/* =========================
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 120px 0;
+}
+
+
+/* =========================================
+   SECTION LABEL
+   ========================================= */
+
+.section-label {
+    color: #626a75;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h2 {
+    color: #e0e3e7;
+
+    font-size: 2.5rem;
+
+    font-weight: 300;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+    max-width: 700px;
+
+    margin-bottom: 150px;
+}
+
+.about p:not(.section-label) {
+    color: #818994;
+
+    margin-bottom: 20px;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   ALBUM SECTION
+   ========================================= */
+
+.albums {
+    width: 100%;
+}
+
+
+/* =========================================
+   ALBUM CARD
+   ========================================= */
+
+.album-card {
+    display: flex;
+
+    align-items: stretch;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: #0e1116;
+
+    border: 1px solid #20252d;
+
+    margin-top: 30px;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        background 0.3s;
+}
+
+
+.album-card:hover {
+    transform: translateY(-5px);
+
+    background: #13171d;
+
+    border-color: #4c535e;
+}
+
+
+/* Album number */
+
+.album-number {
+    min-width: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-right: 1px solid #20252d;
+
+    color: #4b525c;
+
+    font-size: 1.5rem;
+
+    letter-spacing: 3px;
+}
+
+
+/* Album information */
+
+.album-info {
+    padding: 40px;
+}
+
+
+.album-info h3 {
+    color: #dfe2e6;
+
+    font-size: 1.8rem;
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+
+.album-info p {
+    color: #777f89;
+
+    max-width: 600px;
+
+    margin-bottom: 20px;
+}
+
+
+.album-info span {
+    color: #69717c;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
    FOOTER
-   ========================= */
+   ========================================= */
 
 footer {
     text-align: center;
 
-    padding: 40px 20px;
+    padding: 60px 20px;
 
-    border-top: 1px solid #242830;
+    border-top: 1px solid #1d2229;
 
-    color: #555c65;
+    color: #505762;
 
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
 
-/* =========================
+footer p:first-child {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
    MOBILE
-   ========================= */
+   ========================================= */
 
 @media (max-width: 600px) {
 
-    header {
-        min-height: 60vh;
+    .hero {
+        min-height: 90vh;
     }
 
-    header h1 {
-        font-size: 2.3rem;
-        letter-spacing: 5px;
+
+    .hero h1 {
+        font-size: 2.5rem;
+
+        letter-spacing: 6px;
     }
 
-    header p {
-        font-size: 0.8rem;
-        letter-spacing: 2px;
+
+    .subtitle {
+        font-size: 0.6rem;
+
+        letter-spacing: 4px;
     }
+
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
 
     main {
         width: 88%;
-        padding: 60px 0;
+
+        padding: 90px 0;
     }
+
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
-    article {
-        padding: 22px;
+
+    .about {
+        margin-bottom: 100px;
     }
-}
+
+
+    .album-card {
+        flex-direction: column;
+    }
+
+
+    .album-number {
+        min-width: 0;
+
+        padding: 18px;
+
+        justify-content: flex-start;
+
+        border-right: none;
+
+        border-bottom: 1px solid #20252d;
+    }
+
+
+    .album-info {
+        padding: 30px 25px;
+    }
+
+
+    .album-info h3 {
+        font-size: 1.5rem;
+    }
+
+       }
